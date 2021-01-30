@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "css-test": {
+    "agGrid-demo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/css-test",
+            "outputPath": "dist/agGrid-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "css-test:build"
+            "browserTarget": "agGrid-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "css-test:build:production"
+              "browserTarget": "agGrid-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "css-test:build"
+            "browserTarget": "agGrid-demo:build"
           }
         },
         "test": {
@@ -109,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "css-test:serve"
+            "devServerTarget": "agGrid-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "css-test:serve:production"
+              "devServerTarget": "agGrid-demo:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "css-test"
+  "defaultProject": "agGrid-demo"
 }

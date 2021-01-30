@@ -1,15 +1,13 @@
-import { Component, ViewChild } from '@angular/core';
-import { AgGridAngular } from 'ag-grid-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AgGridAngular } from 'ag-grid-angular';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-result-grid',
+  templateUrl: './result-grid.component.html',
+  styleUrls: ['./result-grid.component.css']
 })
-export class AppComponent {
-  title = 'agGrid-demo';
-
+export class ResultGridComponent implements OnInit {
   rowData: any;
   @ViewChild('agGrid', {static: false}) agGrid: AgGridAngular | undefined;
 
@@ -20,8 +18,6 @@ export class AppComponent {
       this.rowData = data
     });
   }
-
-     // =========== BASIC DEMO ==============
 
   columnDefs = [
     // sorting, groupings and other operations are done on the column headers
@@ -34,8 +30,5 @@ export class AppComponent {
     { headerName: 'Model', field: 'model', sortable: true, filter: true},
     { headerName: 'Price', field: 'price', sortable: true, filter: true},
   ]
-
-  // =========== END OF BASIC DEMO ==============
-
 
 }
