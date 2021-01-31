@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cell-custom.component.html',
   styleUrls: ['./cell-custom.component.css']
 })
-export class CellCustomComponent implements OnInit {
+export class CellCustomComponent implements OnInit {    // can implement ICellRendererComp
   data: any;
   params: any;
 
