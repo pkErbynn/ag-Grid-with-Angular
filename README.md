@@ -3,11 +3,18 @@
 ## Intro 
 **agGrid** is a fully-fledged and highly customizable JavaScript data grid. It delivers outstanding features (like sorting, filtering, etc), performance, and rich data display (simple and complex). Interestingly, it also gives a smooth integration with Angular as well.
 
-Why leverage on ag-Grid: 
-- [x] Column Filter, Aligned Grids, Column Groups, 
--[x] Column Moving
+Why leverage on ag-Grid:
+- [x] Column Grouping
+- [x] Column Moving
 - [x] Column Pinning
 - [x] Column Resizing
+- [x] Column and Text Filtering
+- [x] Row Selection
+- [x] Row Sorting
+- [x] Row Dragging
+- [x] Cell Styling
+- [x] Touch Support and
+- [x] Many more...
 
 This demo is a play-around to exploring the nitty-gritty of this agGrid.
 
@@ -34,7 +41,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Non-filter Result
 
-<img src="src/assets/result-snap.PNG">
+<img src="src/assets/result-snap-update.PNG">
 
 ## Filter Result
 
