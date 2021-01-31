@@ -55,4 +55,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [Custom Cell Renderer (in dark mode)](https://github.com/pkErbynn/ag-Grid-with-Angular/tree/cell-renderer#cell-renderer-framework-result-dark-mode)
 
 <br>
+
 [Find more on ag-Grid(Angular) doc here](https://www.ag-grid.com/documentation/angular/)
