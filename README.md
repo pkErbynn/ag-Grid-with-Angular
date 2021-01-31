@@ -35,4 +35,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <img src="src/assets/snap2.PNG">
 
 
-**NOTE:** Can switch _branches_ to see other use cases :-)
+**NOTE:** Can switch _branches_ to see other use cases... :-)
+
+- [Grouping](https://github.com/pkErbynn/ag-Grid-with-Angular/blob/grouping-grid/README.md#grouping-result)
+
+- [Custom Cell Renderer (in dark mode)](https://github.com/pkErbynn/ag-Grid-with-Angular/tree/cell-renderer#cell-renderer-framework-result-dark-mode)
