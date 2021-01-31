@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { AgGridAngular } from 'ag-grid-angular';
 import { HttpClient } from '@angular/common/http';
+import { CellCustomComponent } from './components/cell-custom/cell-custom.component';
+
+// demo of cellRendererFramework for column customization
 
 @Component({
   selector: 'app-root',
@@ -26,8 +28,7 @@ export class AppComponent {
     { headerName: 'Make', field: 'make',
       sortable: true,
       filter: true,
-      checkboxSelection: true,
-      width: 150
+      cellRendererFramework: CellCustomComponent  // as wrapper for this column
     },
     { headerName: 'Model', field: 'model', sortable: true, filter: true},
     { headerName: 'Price', field: 'price', sortable: true, filter: true},
