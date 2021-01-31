@@ -33,3 +33,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Filter Result 
 
 <img src="src/assets/snap2.PNG">
+
+
+**NOTE:** Can switch _branches_ to see other use cases :-)
