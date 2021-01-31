@@ -11,6 +11,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 <img src="src/assets/result-snap.PNG">
 
-### Filter Result 
+### Cell Renderer Framework Result (dark mode)
 
-<img src="src/assets/snap2.PNG">
+<img src="src/assets/cell-renderer-snap.png">
