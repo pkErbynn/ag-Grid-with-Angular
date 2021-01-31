@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ICellRendererAngularComp } from 'ag-grid-angular';
 
 @Component({
   selector: 'app-cell-custom',
   templateUrl: './cell-custom.component.html',
   styleUrls: ['./cell-custom.component.css']
 })
-export class CellCustomComponent implements OnInit {    // can implement ICellRendererComp
+export class CellCustomComponent implements OnInit {    // can implement ICellRendererAngularComp
   data: any;
   params: any;
 
