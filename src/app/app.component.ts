@@ -8,34 +8,29 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'agGrid-demo';
-
+  title = 'Welcome to ag-Grid Demo with Angular';
   rowData: any;
-  @ViewChild('agGrid', {static: false}) agGrid: AgGridAngular | undefined;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    // reading row data from file
     this.http.get("assets/data.json").subscribe(data => {
       this.rowData = data
     });
   }
 
-     // =========== BASIC DEMO ==============
-
+  // Column configurations
   columnDefs = [
     // sorting, groupings and other operations are done on the column headers
     { headerName: 'Make', field: 'make',
       sortable: true,
       filter: true,
       checkboxSelection: true,
-      width: 50
+      width: 150
     },
     { headerName: 'Model', field: 'model', sortable: true, filter: true},
     { headerName: 'Price', field: 'price', sortable: true, filter: true},
   ]
-
-  // =========== END OF BASIC DEMO ==============
-
 
 }
