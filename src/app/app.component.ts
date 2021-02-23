@@ -28,6 +28,7 @@ export class AppComponent {
     { headerName: 'Make', field: 'make',
       sortable: true,
       filter: true,
+      resizable: true,
       cellRendererFramework: CellCustomComponent  // as wrapper for this column
     },
     { headerName: 'Model', field: 'model', sortable: true, filter: true},
