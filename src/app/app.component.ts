@@ -27,7 +27,8 @@ export class AppComponent {
       sortable: true,
       filter: true,
       checkboxSelection: true,
-      width: 150
+      width: 150,
+      resizable: true
     },
     { headerName: 'Model', field: 'model', sortable: true, filter: true},
     { headerName: 'Price', field: 'price', sortable: true, filter: true},
