@@ -2,5 +2,17 @@
   { "make": "Toyota", "model": "Celica", "price": "43445"},
   { "make": "Ford", "model": "Monde", "price": "44000"},
   { "make": "Porche", "model": "Boxter", "price": "55000"},
+  { "make": "Porche", "model": "Banter", "price": "65000"},
+  { "make": "Toyota", "model": "Celica", "price": "43445"},
+  { "make": "Ford", "model": "Monde", "price": "44000"},
+  { "make": "Porche", "model": "Boxter", "price": "55000"},
+  { "make": "Porche", "model": "Banter", "price": "65000"},
+  { "make": "Toyota", "model": "Celica", "price": "43445"},
+  { "make": "Ford", "model": "Monde", "price": "44000"},
+  { "make": "Porche", "model": "Boxter", "price": "55000"},
+  { "make": "Porche", "model": "Banter", "price": "65000"},
+  { "make": "Toyota", "model": "Celica", "price": "43445"},
+  { "make": "Ford", "model": "Monde", "price": "44000"},
+  { "make": "Porche", "model": "Boxter", "price": "55000"},
   { "make": "Porche", "model": "Banter", "price": "65000"}
 ]

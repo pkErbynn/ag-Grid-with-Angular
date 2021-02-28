@@ -20,7 +20,7 @@
 
 
 <!-- Main Body -->
-<div class="content" role="main">
+<div class="main" role="main">
 
   <!-- Highlight Card -->
   <br>
@@ -28,10 +28,14 @@
   <br><br>
 
   <ag-grid-angular
-      style="width: 600px; height: 500px;"
+      style="width: 55%; height: 500px;"
       class="ag-theme-alpine-dark"
-      [rowData]="rowData"
+      [rowData]="rowData | async"
       [columnDefs]="columnDefs"
+      [frameworkComponents]="frameworkComponents"
+      [pagination]="true"
+      [paginationAutoPageSize]="true"
+      [rowDragManaged]="true"
   >
   </ag-grid-angular>
 

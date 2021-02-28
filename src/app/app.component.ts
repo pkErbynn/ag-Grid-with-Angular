@@ -1,8 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CellCustomComponent } from './components/cell-custom/cell-custom.component';
+import { IRide } from './models/ride';
+import { Observable } from 'rxjs';
+import { RideService } from './services/ride.service';
+import { CellButtonRendererComponent } from './components/cell-button-renderer/cell-button-renderer.component';
 
-// demo of cellRendererFramework for column customization
+// demo of cell button renderer for column customization
 
 @Component({
   selector: 'app-root',
@@ -11,28 +13,54 @@ import { CellCustomComponent } from './components/cell-custom/cell-custom.compon
 })
 export class AppComponent {
   title = 'Welcome to ag-Grid Demo with Angular';
-  rowData: any;
+  rowData: Observable<IRide[]>;
+  frameworkComponents: {};
 
-  constructor(private http: HttpClient) { }
+  constructor(private rideService: RideService) {
+    // referenced in view to render button
+    this.frameworkComponents = {
+      buttonCellRenderer: CellButtonRendererComponent
+    }
+  }
 
   ngOnInit(): void {
-    // reading row data from file
-    this.http.get("assets/data.json").subscribe(data => {
-      this.rowData = data
-    });
+    this.rowData = this.rideService.getRides();
   }
 
   // Column configurations
   columnDefs = [
-    // sorting, groupings and other operations are done on the column headers
-    { headerName: 'Make', field: 'make',
+    { headerName: 'Make',
+      field: 'make',
       sortable: true,
       filter: true,
       resizable: true,
-      cellRendererFramework: CellCustomComponent  // as wrapper for this column
     },
-    { headerName: 'Model', field: 'model', sortable: true, filter: true},
-    { headerName: 'Price', field: 'price', sortable: true, filter: true},
+    { headerName: 'Model',
+      field: 'model',
+      sortable: true,
+      filter: true,
+      resizable: true,
+    },
+    { headerName: 'Price',
+      field: 'price',
+      sortable: true,
+      filter: true,
+      resizable: true,
+    },
+    { headerName: 'Action',
+      field: '',
+      resizable: true,
+      cellRenderer: 'buttonCellRenderer', // targets the button renderer reference
+      cellRendererParams: {
+        onClick: this.onView.bind(this),  // passes AppComponent object as param in order to access the rowData
+        label: 'View'
+      }
+    },
   ]
+
+  onView(event: this) {
+    const selectedRideData = JSON.stringify(event.rowData) // convert Ride object to json
+    alert(selectedRideData);
+  }
 
 }

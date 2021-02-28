@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 
+// NB: this component was NOT referenced
+
 @Component({
   selector: 'app-cell-custom',
   templateUrl: './cell-custom.component.html',
