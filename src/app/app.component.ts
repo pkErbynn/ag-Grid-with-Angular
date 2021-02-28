@@ -56,6 +56,7 @@ export class AppComponent {
         label: 'View'
       }
     },
+    // nb: since id column not configured, won't render
   ]
 
   onView(event: this) {
