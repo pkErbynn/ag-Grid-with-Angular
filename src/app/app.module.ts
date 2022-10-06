@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { DataTableModule } from './shared/data-table/data-table.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,8 @@ import { AgGridModule } from 'ag-grid-angular';
   ],
   imports: [
     BrowserModule,
-    AgGridModule.withComponents([]),
-    HttpClientModule
+    HttpClientModule,
+    DataTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
