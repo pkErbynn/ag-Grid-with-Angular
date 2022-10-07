@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ColDef, RowClickedEvent } from 'ag-grid-community';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-data-table',
@@ -9,7 +8,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements OnInit {
-  rowData: any[] = [];
+  // rowData: any[] = [];
+  rowData$: Observable<any[]>;
   columnDefs: ColDef[];
   paginationPageSize: number;
 
@@ -36,7 +36,7 @@ export class DataTableComponent implements OnInit {
   }
 
   onGridReady(params) {
-    this.rowData = this.data;
+    this.rowData$ = of(this.data);
   }
 
   onRowClicked(event: RowClickedEvent) {

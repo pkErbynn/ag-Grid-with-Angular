@@ -27,7 +27,9 @@
   <div class="card highlight-card card-small"> Table Grid </div>
   <br><br>
 
-  <app-data-table [dataToRender]="tableDataToRender" [tableHeadings]="tableHeadingDefinitions" (rowClickedData)="onRowClickedData($event)"></app-data-table>
+  <!-- <div *ngIf="tableDataToRender">
+  </div> -->
+  <app-data-table [tableHeadings]="tableHeadingDefinitions" [dataToRender]="tableDataToRender" (rowClickedData)="onRowClickedData($event)"></app-data-table>
 
   <!-- Footer: Background  -->
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
